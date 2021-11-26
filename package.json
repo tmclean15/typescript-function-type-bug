@@ -1,0 +1,16 @@
+{
+  "name": "typescript-function-type-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "$(npm bin)/tsc",
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}
