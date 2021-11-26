@@ -22,16 +22,25 @@ const func1: FunctionType = ({ name, weight, volume, lab }) => {
   };
 };
 
-// const func2: FunctionType = ({ name, weight, volume, lab }) => {
-//   const tmp: ReturnEntity = {
-//     name,
-//     weight,
-//     volume,
-//     lab, // Has type error as expected
-//   };
+const func2: FunctionType = ({ name, weight, volume, lab }) => {
+  const tmp: ReturnEntity = {
+    name,
+    weight,
+    volume,
+    lab, // Has type error as expected
+  };
 
-//   return tmp;
-// };
+  return tmp;
+};
+
+const func3 = ({ name, weight, volume, lab }: Entity): ReturnEntity => {
+  return {
+    name,
+    weight,
+    volume,
+    lab, // Also has type error as expected
+  };
+};
 
 const entity: Entity = {
   name: "test",
@@ -41,4 +50,4 @@ const entity: Entity = {
 };
 
 console.log(func1(entity));
-// console.log(func2(entity));
+console.log(func2(entity));
